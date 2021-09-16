@@ -1,0 +1,787 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <!--=============== ===== SWIPER CSS ====================-->
+	 <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+     
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Music Storage Webpage</title>
+    <link rel="icon" href="assets/img/music.svg" />
+
+      <!--==================== UNICONS ====================-->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<!--==================== CSS ====================-->
+<link rel="stylesheet" href="assets/css/style.css">
+
+    <meta name="theme-color" content="#000000">
+	<meta name="viewport" content="width=device-width , initial-scale=1">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+	<div class="main">
+		<div class="progress_bar" id="Bar"></div>
+		<!-- <img src="assets/img/pexels-vishnu-r-nair-1105666.jpg" alt="" id="bg"> -->
+
+		<!-- navbar part -->
+		<div class="navbar">
+			<a href="#" id="logo"><i class='bx bxs-bar-chart-alt-2' ></i>&nbsp;Music</a>
+            <a onclick="open_close_menu()" id="responsive_menu"><i class='bx bxs-chevron-down' ></i></a>
+
+			<div class="nav_content">
+				<li><a href="#">Home</a></li>
+				<li><a href="#top_tracks">Tracks</a></li>
+				<li><a href="#user_comments">Comments</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">start for free</a></li>
+				<li><i class="uil uil-moon change-theme" id="theme-button" onclick="enableAutoplay();"><b>Switch Theme</b></i></li>
+
+			</div>
+
+            <a onclick="menu_action()" id="menu_btn"></i></a>
+			<div class="side_menu">
+				<!-- <li><a href="#"><i class='bx bx-category'></i></a></li>
+				<li><a href="#"><i class='bx bx-tv'></i></a></li>
+				<li><a href="#"><i class='bx bxs-movie-play'></i></a></li>
+				<li><a href="#"><i class='bx bxs-message-square-detail'></i></a></li>
+				<li><a href="#"><i class='bx bx-merge'></i></a></li>
+				<li><a href="#"><i class='bx bxs-cart-add'></i></a></li>
+				<li><i class="uil uil-moon change-theme" id="theme-button" onclick="">  </i></li> -->
+
+
+
+
+
+
+			</div>
+		</div>
+     
+       <!--  mid part -->
+		<div class="mid_part">
+			
+			
+            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <mask id="mask0" mask-type="alpha">
+                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                </mask>
+                <g mask="url(#mask0)">
+                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                    <image class="home__blob-img" x='12' y='22' xlink:href="assets/img/perfil.png"/>
+                </g>
+            </svg>
+
+			<div class="description">
+				<hr><br><br><p id="A_name"> Angelina</p><br>
+				<p>A Enthusiastic Web Developer </p>
+				<br>
+				<div class="author_desc">
+				   <p>This is the Music Storage Page . All of it's  content has taken from Youtube. I Hope You Will Enjoy ;)</p>
+				</div>
+<br>
+                 <div class="buttons button--link">
+                   <button><i class='bx bx-play'></i></button>
+				   <button><i class='bx bxs-like' ></i></button>
+				   <button><i class='bx bx-share-alt'></i></button>
+				   <button><i class='bx bx-bookmark-alt'></i></button>
+                 </div>
+<br><br><br><hr>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+        <!-- tracks part -->
+		<div class="top_tracks" id="top_tracks">
+			<p id="heading"><i class='bx bxs-playlist'></i>&nbsp;&nbsp;Top Tracks</p>
+			<div id="track"></div>
+			
+			<div id="track">
+				<img src="assets/img/img1.jpg" alt="" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+
+				<audio src="assets/audio/1.mp3" id="music"></audio>
+
+				<div id="song_desc">
+				   <p>Darshan Raval Famous Song</p>
+				   <p>Darshan Raval</p>
+				   <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				   <p id="message">New</p>
+				</div>
+				<div id="actions_2">
+				  <p><a href="#"><i class='bx bx-share' ></i></a></p>
+				  <p><a href="https://www.youtube.com/watch?v=eK0IIyBlYew"  target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="assets/img/img2.jpg" alt="" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/lut.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					<p>Jubin Nautiyal Famous Song</p>
+				   <p>Jubin Nautiyal</p>
+				   <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				   <p id="message">New</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+				  <p><a href="https://www.youtube.com/watch?v=sCbbMZ-q4-I" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="assets/img/img3.jpg" alt="" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/3.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Jalraj Famous Song</p>
+				     <p>Jalraj</p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				     <p id="message">New</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+				  <p><a href="https://www.youtube.com/watch?v=NeXbmEnpSz0" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="assets/img/img4.jpg" alt="" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/4.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Arjit Singh Famous Song</p>
+				     <p>Arjit Singh</p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=NUo8CKI34o4" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="assets/img/img5.jpg" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/5.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Shreya Ghoshal Famous Song</p>
+				     <p>Shteya Ghoshal</p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=FGTv9-oQhIg" download  target="_blank"><i class="uil uil-youtube youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+
+			
+			<div id="track">
+				<img src="assets/img/img6.jpg" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/6.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Dhavni Bhanushali Famous Song</p>
+				     <p>Dhavni Bhanushali</p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000000000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=BBAyRBTfsOU" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+			
+			<div id="track">
+				<img src="assets/img/img7.jpg" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/7.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Taylor Shift Famous Song</p>
+				     <p>Taylor Swift</p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=e-ORhEE9VVg" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+
+
+			<div id="track">
+				<img src="assets/img/8.jpg" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/8.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Imagine Dragons  Famous Song</p>
+				     <p>Imagine Dragons </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;200000000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=7wtfhZwyrcc" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+
+			<div id="track">
+				<img src="assets/img/img9.jpg" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/9.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Mannat Noor  Famous Song</p>
+				     <p>Mannat Noor </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=YpkJO_GrCo0" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+			<div id="track">
+				<img src="assets/img/img10.jfif" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/10.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Rahat Fateh Ali Khan  Famous Song</p>
+				     <p>Rahat Fateh Ali Khan </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=6-n_szx2XRE" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+
+			<div id="track">
+				<img src="assets/img/11.jfif" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/11.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p> Pratik Bachan Famous Song</p>
+				     <p> Pratik Bachan,</p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;20000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=hMy5za-m5Ew" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+
+			<div id="track">
+				<img src="assets/img/12.jpg" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/12.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Neha Kakkar Famous Song</p>
+				     <p>Neha Kakkar </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=N2-HsIYd0Go" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+			<div id="track">
+				<img src="assets/img/13.jpg" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/13.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Jass Manak  Famous Song</p>
+				     <p>Jass Manak  </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;2000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=RKioDWlajvo" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+			
+			<div id="track">
+				<img src="assets/img/14.jpg" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/14.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Guru Randhawa Famous Song</p>
+				     <p>Guru Randhawa  </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;20000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=hjWf8A0YNSE" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+			<div id="track">
+				<img src="assets/img/17.jfif" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/17.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Christopher Comstock Famous Song</p>
+				     <p>Christopher Comstock  </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;20000000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=ALZHF5UqnU4" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="assets/img/alan.jpg" alt="" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/16.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Alan Walker Famous Song</p>
+				     <p>Alan Walker  </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;200000000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=60ItHLz5WEA&list=OLAK5uy_lXvDpcGEScu3zfho6acfrPe8NoF1OL008" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+					
+			<div id="track">
+				<img src="assets/img/ind.webp" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/15.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Indila Famous Song</p>
+				     <p>Indila </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;200000000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=K5KAc5CoCuk" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+
+
+
+			<div id="track">
+				<img src="assets/img/img20.jpg" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/20.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Dharia Famous Song</p>
+				     <p>Dharia </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;20000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=y2tEPmwWEiI" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+			<div id="track">
+				<img src="assets/img/ser.jpg" class="artist_img" class="artist_img">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="assets/audio/19.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>Serena Famous Song</p>
+				     <p>Serena </p>
+				     <p id="total_download"><i class='bx bx-download'></i>&nbsp;&nbsp;20000+</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share' ></i></p>
+					<p><a href="https://www.youtube.com/watch?v=lpeuIu-ZYJY" download target="_blank"><i class="uil uil-youtube"></i></a></p>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+
+
+        <!-- user comments part -->
+		<div class="user_comments" id="user_comments">
+			<p id="heading"><i class='bx bx-comment-detail'></i>&nbsp;&nbsp;Comments</p>
+            
+           <div class="comments">
+
+           	 <div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bx-user' ></i>&nbsp;&nbsp;Aadhya</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>It is a long established that reader will be distracted by the readable content of a page when looking at it layout.</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           	 <div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bx-user' ></i>&nbsp;&nbsp;Ishank</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>You have displayed a highly consistent level of a performance in   your  work."</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           	 <div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bx-user' ></i>&nbsp;&nbsp;Dasya</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>“You regularly follow up with existing and new clients to make sure they feel valued and reminded about us.”</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           	<div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bx-user' ></i>&nbsp;&nbsp;Luv</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>"You have portrayed exemplary behaviour in all aspects of work."</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           </div>
+
+		</div>
+
+		<!-- popular creator part -->
+		<div class="popular_creator">
+           <p id="heading"><i class='bx bx-trophy' ></i>&nbsp;&nbsp;Popular Creator</p>
+            <div class="artists_list">
+
+            	<div class="artist"><a href="https://www.youtube.com/c/DarshanRavalDZ" target="_blank"> 
+            		<img src="assets/img/img11.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Darshan Raval</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            		
+            	</div>
+
+
+				<div class="artist"><a href="https://www.youtube.com/c/Alanwalkermusic" target="_blank"> 
+            		<img src="assets/img/alan.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Alan Walker</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            		
+            	</div>
+
+
+
+				<div class="artist"><a href="https://www.youtube.com/channel/UCEdvpU2pFRCVqU6yIPyTpMQ" target="_blank"> 
+            		<img src="assets/img/17.jfif" alt="">
+            		<div class="artist_desc">
+            			<p>Christopher Comstock</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            		
+            	</div>
+
+
+            	<div class="artist"><a href="https://www.youtube.com/c/SoulfulArijitSingh" target="_blank">
+            		<img src="assets/img/img4.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Arjit Singh</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            	</div>
+
+            	<div class="artist"><a href="https://www.youtube.com/c/ShreyaGhoshalOfficial" target="_blank">
+            		<img src="assets/img/img5.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Shreya Ghoshal</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            	</div>
+
+
+
+				<div class="artist"><a href="https://www.youtube.com/c/SerenaOfficial/videos" target="_blank">
+            		<img src="assets/img/ser.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Serena Ryder</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            	</div>
+
+            	<div class="artist"><a href="https://www.youtube.com/c/DhvaniBhanushali" target="_blank">
+            		<img src="assets/img/img6.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Dhavni Bhanushali</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            	</div>
+
+            	<div class="artist"><a href="https://www.youtube.com/c/JalRajOfficial" target="_blank">
+            		<img src="assets/img/img3.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Jalraj</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            	</div>
+
+
+
+
+
+				<div class="artist"><a href="https://www.youtube.com/user/ThraceMusic" target="_blank">
+            		<img src="assets/img/img20.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Dharia</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            	</div>
+            	
+
+            	<div class="artist"><a href="https://www.youtube.com/channel/UCqECaJ8Gagnn7YCbPEzWH6g" target="_blank">
+            		<img src="assets/img/img7.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Taylor Swift</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+            	</div>
+				<div class="artist"><a href = "https://www.youtube.com/channel/UCdnPPbjGZiX7Dw56YDYVDsg" target="_blank">
+					<img src="assets/img/img2.jpg" alt="">
+            		<div class="artist_desc">
+            			<p>Jubin Nautiyal</p>
+            			<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+            		</div></a>
+
+
+
+            	</div>
+				<div class="artist"><a href = "https://www.youtube.com/user/ImagineDragons" target="_blank">
+					<img src="assets/img/8.jpg" alt="">
+					<div class="artist_desc">
+						<p>Imagine Dragons </p>
+						<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+					</div></a>
+
+
+					</div>
+					<div class="artist"><a href = "https://www.youtube.com/user/NehaKakkarOfficial" target="_blank">
+						<img src="assets/img/12.jpg" alt="">
+						<div class="artist_desc">
+							<p>Neha Kakkar</p>
+							<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+						</div></a>
+						</div>
+
+
+
+						<div class="artist"><a href = "https://www.youtube.com/channel/UCX4EBb-NmxyntI0mQAErHvQ" target="_blank">
+							<img src="assets/img/ind.webp" alt="">
+							<div class="artist_desc">
+								<p>Indila</p>
+								<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+							</div></a>
+							</div>
+
+
+							<div class="artist"><a href = "https://www.youtube.com/user/Page1Records" target="_blank">
+								<img src="assets/img/14.jpg" alt="">
+								<div class="artist_desc">
+									<p>Guru Randhawa</p>
+									<p><i class='bx bx-like' ></i>&nbsp;&nbsp;2000+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bx-share' ></i>500+</p>
+								</div></a>
+								</div>
+            </div>
+
+
+
+		</div>
+
+        <!-- footer part -->
+		<div class="footer">
+			<a id="logo "><i class='bx bxs-bar-chart-alt-2 '></i>&nbsp;Music</a>
+			<p class="footer__copy">&#169; Rishabh_Maurya. All Right Reserved</p>
+			<div class="social_handle">
+				<i class='bx bxl-twitter foot'></i>
+				<i class='bx bxl-twitch foot'></i>
+				<i class='bx bxl-github foot' ></i>
+			</div>
+		</div>
+
+	</div>
+
+  <!-- javascript file -->
+  <script src="assets/js/main.js"></script>
+
+
+  <!--==================== SWIPER JS ====================-->
+
+
+  <audio id="myAudio" loop>
+	<source src="assets/audio/test.wav">
+   
+  </audio>
+
+
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+</body>
+</html>
